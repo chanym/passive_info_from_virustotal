@@ -98,7 +98,7 @@ def printDomain(res):
 def passive_vt(data_list):
     count = 0
     num = 0
-    key = '7668d5f491cc5d768bc49e89e6ae2bd610cf901dd034b9203b42342840d19c3b' #api key needs to be key here 
+    key = '' #api key needs to be key here 
 
     while num < len(data_list):
         if count < 4:
