@@ -7,8 +7,10 @@ Usage:
   
 Can use interactively in python shell by calling the vt function 
 
->>> import passiveinfo
->>> print passiveinfo.vt.__doc__
-Get passive info from virustotal - 
-    Usage: passiveinfo.vt(['<domain or IP>'])
-    example passviveinfo.vt(['www.github.com', '8.8.8.8'])
+import passiveinfo
+
+passiveinfo.vt(['<domain or ip>'])
+
+example :
+
+passviveinfo.vt(['www.github.com', '8.8.8.8'])
