@@ -13,4 +13,4 @@ passiveinfo.vt(['<domain or ip>'])
 
 example :
 
-passviveinfo.vt(['www.github.com', '8.8.8.8'])
+passiveinfo.vt(['www.github.com', '8.8.8.8'])
