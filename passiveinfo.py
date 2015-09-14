@@ -111,7 +111,7 @@ def vt(data_list):
                 payload = {"ip": data_list[num], 'apikey': key}
                 print("\n\n---------- {0} ----------".format(data_list[num]))
                 page = requests.get('http://www.virustotal.com/vtapi/v2/ip-address/report', params=payload)
-                result = page.json()
+                result = page.json
                 printinfo(result)
                 count += 1
                 num += 1
@@ -119,12 +119,12 @@ def vt(data_list):
                 payload = {'domain': data_list[num], 'apikey': key}
                 print("\n\n---------- {0} ----------".format(data_list[num]))
                 page = requests.get('http://www.virustotal.com/vtapi/v2/domain/report', params=payload)
-                result = page.json()
+                result = page.json
                 printinfo(result)
                 count += 1
                 num += 1
         else:
-            time.sleep(0)
+            time.sleep(60)
             count = 0
 
 def main():
