@@ -91,7 +91,10 @@ def printinfo(res):
 
         for i in fields:
             if i not in special:
-                print('\n{0}: {1}'.format(i, res[i]))
+        	try:
+                    print('\n{0}: {1}'.format(i, res[i]))
+                except UnicodeEncodeError:
+                    print('\n{0}: {1}'.format(i.encode('utf-8'), res[i].encode('utf-8')))
 
     else:
         print("Currently no Domain data found...\n")
@@ -111,7 +114,7 @@ def vt(data_list):
                 payload = {"ip": data_list[num], 'apikey': key}
                 print("\n\n---------- {0} ----------".format(data_list[num]))
                 page = requests.get('http://www.virustotal.com/vtapi/v2/ip-address/report', params=payload)
-                result = page.json
+                result = page.json()
                 printinfo(result)
                 count += 1
                 num += 1
@@ -119,7 +122,7 @@ def vt(data_list):
                 payload = {'domain': data_list[num], 'apikey': key}
                 print("\n\n---------- {0} ----------".format(data_list[num]))
                 page = requests.get('http://www.virustotal.com/vtapi/v2/domain/report', params=payload)
-                result = page.json
+                result = page.json()
                 printinfo(result)
                 count += 1
                 num += 1
